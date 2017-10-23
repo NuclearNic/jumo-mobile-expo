@@ -1,33 +1,26 @@
-import React, { Component, PropTypes } from 'react';
-import {
-	StyleSheet,
-	View,
-	Image,
-	TouchableOpacity,
-	Animated,
-	Easing
-} from 'react-native';
-import { Actions, ActionConst } from 'react-native-router-flux';
-import arrowImg from '../images/left-arrow.png';
+import React, { Component, PropTypes } from 'react'
+import { StyleSheet, View, Image, TouchableOpacity, Animated, Easing } from 'react-native'
+import { Actions, ActionConst } from 'react-native-router-flux'
+import arrowImg from '../images/left-arrow.png'
 
-const SIZE = 40;
+const SIZE = 40
 
 export default class SecondScreen extends Component {
 	constructor() {
-		super();
+		super()
 
 		this.state = {
 			isLoading: false,
-		};
+		}
 
-		this._onPress = this._onPress.bind(this);
-		this.growAnimated = new Animated.Value(0);
+		this._onPress = this._onPress.bind(this)
+		this.growAnimated = new Animated.Value(0)
 	}
 
 	_onPress() {
-		if (this.state.isLoading) return;
+		if (this.state.isLoading) return
 
-		this.setState({ isLoading: true });
+		this.setState({ isLoading: true })
 
 		Animated.timing(
 			this.growAnimated,
@@ -36,18 +29,18 @@ export default class SecondScreen extends Component {
 				duration: 300,
 				easing: Easing.linear,
 			}
-		).start();
+		).start()
 
 		setTimeout(() => {
-			Actions.pop();
-		}, 500);
+			Actions.pop()
+		}, 500)
 	}
 
 	render() {
 		const changeScale = this.growAnimated.interpolate({
 			inputRange: [0, 1],
 			outputRange: [1, SIZE],
-		});
+		})
 
 		return (
 			<View style={styles.container}>
@@ -58,7 +51,7 @@ export default class SecondScreen extends Component {
 				</TouchableOpacity>
 				<Animated.View style={[ styles.circle, {transform: [{scale: changeScale}]} ]} />
 			</View>
-		);
+		)
 	}
 }
 
@@ -89,4 +82,4 @@ const styles = StyleSheet.create({
 		width: 24,
 		height: 24,
 	}
-});
+})

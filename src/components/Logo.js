@@ -1,12 +1,7 @@
-import React, { Component, PropTypes } from 'react';
-import {
-	StyleSheet,
-	View,
-	Text,
-	Image,
-} from 'react-native';
+import React, { Component, PropTypes } from 'react'
+import { StyleSheet, View, Text, Image } from 'react-native'
 
-import logoImg from '../images/logo.png';
+import logoImg from '../images/logo.png'
 
 export default class Logo extends Component {
 	render() {
@@ -15,7 +10,7 @@ export default class Logo extends Component {
 				<Image source={logoImg} style={styles.image} />
 				{/* <Text style={styles.text}>REACT NATIVE</Text> */}
 			</View>
-		);
+		)
 	}
 }
 
@@ -36,4 +31,4 @@ const styles = StyleSheet.create({
 		backgroundColor: 'transparent',
 		marginTop: 20,
 	}
-});
+})

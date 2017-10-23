@@ -1,11 +1,8 @@
-import React, { Component, PropTypes } from 'react';
-import Dimensions from 'Dimensions';
-import {
-	StyleSheet,
-	Image,
-} from 'react-native';
+import React, { Component, PropTypes } from 'react'
+import Dimensions from 'Dimensions'
+import { StyleSheet, Image } from 'react-native'
 
-import bgSrc from '../images/wallpaper.png';
+import bgSrc from '../images/wallpaper.png'
 
 export default class Wallpaper extends Component {
 	render() {
@@ -13,7 +10,7 @@ export default class Wallpaper extends Component {
 			<Image style={styles.picture} source={bgSrc}>
 				{this.props.children}
 			</Image>
-		);
+		)
 	}
 }
 
@@ -24,4 +21,4 @@ const styles = StyleSheet.create({
 		height: null,
 		resizeMode: 'cover',
 	},
-});
+})

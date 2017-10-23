@@ -1,11 +1,6 @@
-import React, { Component, PropTypes } from 'react';
-import Dimensions from 'Dimensions';
-import {
-	StyleSheet,
-	View,
-	TextInput,
-	Image,
-} from 'react-native';
+import React, { Component, PropTypes } from 'react'
+import Dimensions from 'Dimensions'
+import { StyleSheet, View, TextInput, Image } from 'react-native'
 
 export default class UserInput extends Component {
 	render() {
@@ -22,7 +17,7 @@ export default class UserInput extends Component {
 					placeholderTextColor='white'
 					underlineColorAndroid='transparent' />
 			</View>
-		);
+		)
 	}
 }
 
@@ -33,10 +28,10 @@ UserInput.propTypes = {
 	autoCorrect: PropTypes.bool,
 	autoCapitalize: PropTypes.string,
 	returnKeyType: PropTypes.string,
-};
+}
 
-const DEVICE_WIDTH = Dimensions.get('window').width;
-const DEVICE_HEIGHT = Dimensions.get('window').height;
+const DEVICE_WIDTH = Dimensions.get('window').width
+const DEVICE_HEIGHT = Dimensions.get('window').height
 
 const styles = StyleSheet.create({
 	input: {
@@ -59,4 +54,4 @@ const styles = StyleSheet.create({
 		left: 35,
 		top: 9,
 	},
-});
+})
