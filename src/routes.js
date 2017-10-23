@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Router, Scene, Actions, ActionConst } from 'react-native-router-flux'
 
-import LoginScreen from '../screens/LoginScreen'
-import SecondScreen from '../screens/SecondScreen'
+import LoginScreen from './screens/LoginScreen'
+import SecondScreen from './screens/SecondScreen'
 
 export default class Main extends Component {
   render() {

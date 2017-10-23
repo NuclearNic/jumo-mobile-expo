@@ -6,8 +6,8 @@ import UserInput from './UserInput'
 import ButtonSubmit from './ButtonSubmit'
 import SignupSection from './SignupSection'
 
-import usernameImg from '../images/username.png'
-import passwordImg from '../images/password.png'
+import usernameImg from '../../images/username.png'
+import passwordImg from '../../images/password.png'
 // import eyeImg  from '../images/eye_black.png'
 
 export default class Form extends Component {

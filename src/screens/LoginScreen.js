@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react'
-import Logo from '../components/Logo'
-import Form from '../components/Form'
+import Logo from '../components/JumoLogo'
 import Wallpaper from '../components/Wallpaper'
-import ButtonSubmit from '../components/ButtonSubmit'
-import SignupSection from '../components/SignupSection'
+import Form from '../components/loginScreen/Form'
+import ButtonSubmit from '../components/loginScreen/ButtonSubmit'
+import SignupSection from '../components/loginScreen/SignupSection'
 
 export default class LoginScreen extends Component {
 	render() {
