@@ -3,9 +3,11 @@ import { StyleSheet, View, Image, TouchableOpacity, Animated, Easing } from 'rea
 import { Actions, ActionConst } from 'react-native-router-flux'
 import arrowImg from '../images/left-arrow.png'
 
+import styles from '../styles/Home'
+
 const SIZE = 40
 
-export default class SecondScreen extends Component {
+export default class HomeScreen extends Component {
 	constructor() {
 		super()
 
@@ -54,32 +56,32 @@ export default class SecondScreen extends Component {
 		)
 	}
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		margin: 20,
-		alignItems: 'flex-end',
-		justifyContent: 'flex-end',
-	},
-	button: {
-		alignItems: 'center',
-		justifyContent: 'center',
-		width: SIZE,
-		height: SIZE,
-		borderRadius: 100,
-		zIndex: 99,
-		backgroundColor: '#FFD503',
-	},
-	circle: {
-		height: SIZE,
-		width: SIZE,
-		marginTop: -SIZE,
-		borderRadius: 100,
-		backgroundColor: '#FFD503',
-	},
-	image: {
-		width: 24,
-		height: 24,
-	}
-})
+//
+// const styles = StyleSheet.create({
+// 	container: {
+// 		flex: 1,
+// 		margin: 20,
+// 		alignItems: 'flex-end',
+// 		justifyContent: 'flex-end',
+// 	},
+// 	button: {
+// 		alignItems: 'center',
+// 		justifyContent: 'center',
+// 		width: SIZE,
+// 		height: SIZE,
+// 		borderRadius: 100,
+// 		zIndex: 99,
+// 		backgroundColor: '#FFD503',
+// 	},
+// 	circle: {
+// 		height: SIZE,
+// 		width: SIZE,
+// 		marginTop: -SIZE,
+// 		borderRadius: 100,
+// 		backgroundColor: '#FFD503',
+// 	},
+// 	image: {
+// 		width: 24,
+// 		height: 24,
+// 	}
+// })

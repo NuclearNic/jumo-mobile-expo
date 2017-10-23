@@ -8,7 +8,8 @@ import SignupSection from './SignupSection'
 
 import usernameImg from '../../images/username.png'
 import passwordImg from '../../images/password.png'
-// import eyeImg  from '../images/eye_black.png'
+
+import styles from '../../styles/loginScreen/Form'
 
 export default class Form extends Component {
 	constructor(props) {
@@ -44,29 +45,8 @@ export default class Form extends Component {
 						style={styles.btnEye}
 						onPress={this.showPass}
 					>
-						{/* <Image source={eyeImg} style={styles.iconEye} /> */}
 					</TouchableOpacity>
 			</KeyboardAvoidingView>
 		)
 	}
 }
-
-const DEVICE_WIDTH = Dimensions.get('window').width
-const DEVICE_HEIGHT = Dimensions.get('window').height
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		alignItems: 'center',
-	},
-	btnEye: {
-    position: 'absolute',
-    top: 55,
-    right: 28,
-  },
-  iconEye: {
-    width: 25,
-    height: 25,
-    tintColor: 'rgba(0,0,0,0.2)',
-  },
-})

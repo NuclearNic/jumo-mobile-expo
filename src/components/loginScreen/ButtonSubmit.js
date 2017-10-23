@@ -4,6 +4,7 @@ import { StyleSheet, TouchableOpacity, Text, Animated, Easing, Image, Alert, Vie
 import { Actions, ActionConst } from 'react-native-router-flux'
 
 import spinner from '../../images/loading.gif'
+import styles from '../../styles/loginScreen/ButtonSubmit'
 
 const DEVICE_WIDTH = Dimensions.get('window').width
 const DEVICE_HEIGHT = Dimensions.get('window').height
@@ -40,7 +41,7 @@ export default class ButtonSubmit extends Component {
 		}, 2000)
 
 		setTimeout(() => {
-			Actions.secondScreen()
+			Actions.homeScreen()
 			this.setState({ isLoading: false })
 			this.buttonAnimated.setValue(0)
 			this.growAnimated.setValue(0)
@@ -86,39 +87,3 @@ export default class ButtonSubmit extends Component {
 		)
 	}
 }
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		top: -95,
-		alignItems: 'center',
-		justifyContent: 'flex-start',
-	},
-	button: {
-		alignItems: 'center',
-		justifyContent: 'center',
-		backgroundColor: '#FFD503',
-		height: MARGIN,
-		borderRadius: 20,
-		zIndex: 100,
-	},
-	circle: {
-		height: MARGIN,
-		width: MARGIN,
-		marginTop: -MARGIN,
-		borderWidth: 1,
-		borderColor: '#FFD503',
-		borderRadius: 100,
-		alignSelf: 'center',
-		zIndex: 99,
-		backgroundColor: '#FFD503',
-	},
-	text: {
-		color: 'black',
-		backgroundColor: 'transparent',
-	},
-	image: {
-		width: 24,
-		height: 24,
-	},
-})

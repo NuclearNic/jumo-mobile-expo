@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import Dimensions from 'Dimensions'
 import { StyleSheet, Image } from 'react-native'
 
+import styles from '../styles/Wallpaper'
 import bgSrc from '../images/wallpaper.png'
 
 export default class Wallpaper extends Component {
@@ -13,12 +14,3 @@ export default class Wallpaper extends Component {
 		)
 	}
 }
-
-const styles = StyleSheet.create({
-	picture: {
-		flex: 1,
-		width: null,
-		height: null,
-		resizeMode: 'cover',
-	},
-})
